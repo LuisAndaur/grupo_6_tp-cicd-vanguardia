@@ -1,0 +1,32 @@
+# Dependencias
+node_modules/
+bower_components/
+
+# Archivos de entorno y sensibles (¡Nunca los subas!)
+.env
+.env.local
+.env.*.local
+
+# Builds, compilaciones y carpetas generadas
+dist/
+build/
+out/
+.next/
+.nuxt/
+
+# Archivos de registro (logs)
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Archivos del editor
+.vscode/
+.idea/
+*.swp
+*.swo
