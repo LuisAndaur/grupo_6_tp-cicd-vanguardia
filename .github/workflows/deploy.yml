@@ -3,7 +3,7 @@ name: Deploy to Netlify
 on:
   push:
     branches:
-      - master  # Cambia 'main' por tu rama principal si es diferente
+      - master  # Cambialo a 'main' si tu rama principal se llama así
 
 jobs:
   build-and-deploy:
@@ -12,11 +12,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      # Desplegamos directamente usando el CLI oficial de Netlify
       - name: Deploy to Netlify
-        uses: jsmrcaga/action-netlify-deploy@v2.0.0
-        with:
+        run: npx netlify-cli deploy --dir=. --prod
+        env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          NETLIFY_DEPLOY_TO_PROD: true
-          build_directory: .
-          build_command: 'echo "Sin build: Proyecto estático nativo"'
