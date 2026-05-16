@@ -20,8 +20,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build project
-        run: npm run build # Este comando debe generar tu carpeta de compilación (dist, build, etc.)
+      #- name: Build project
+       # run: npm run build # Este comando debe generar tu carpeta de compilación (dist, build, etc.)
 
       - name: Deploy to Netlify
         uses: jsmrcaga/action-netlify-deploy@v2.0.0
